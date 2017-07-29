@@ -1,0 +1,4 @@
+baseURL = "http://casamarket.be/"
+languageCode = "en-us"
+title = "Verse slaatjes op de markt"
+theme= "ananke"
