@@ -1,20 +1,20 @@
 <div class="col s6">
-    <h2 class="header">{{ .name }}</h2>
+    <h2 class="header">{{ .fields.name }}</h2>
     <div class="card horizontal">
         <div class="card-image">
-        <img src="{{ .image }}">
+        <img src="{{ .fields.image.fields.file.url }}">
         </div>
         <div class="card-stacked">
         <div class="card-content">
-            <p>{{ .description }}</p>
+            <p>{{ .fields.description }}</p>
         </div>
         <div class="card-action">
             <button
                 class="snipcart-add-item waves-effect waves-light btn"
-                data-item-id="{{ .id }}"
-                data-item-name="{{ .name }}"
-                data-item-price="{{ .price }}"
-                data-item-url="{{ .url }}">
+                data-item-id="{{ .sys.id }}"
+                data-item-name="{{ .fields.name }}"
+                data-item-price="{{ .fields.price }}"
+                data-item-url="{{ .fields.image.fields.file.url }}">
                     <i class="material-icons right">shopping_cart</i>
                     Add to cart
             </button>

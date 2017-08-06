@@ -1,0 +1,20 @@
+{
+  "name": "snipcart-hugo-contentful",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -f static/*.js static/*.css",
+    "build:content": "node data/import.js",
+    "babel:build": "echo 'https://www.aerobatic.com/blog/hugo-npm-buildtool-setup/'",
+    "start": "npm run clean && npm run build:content && npm run babel:build && parallelshell 'hugo serve'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parallelshell": "^3.0.1",
+    "chalk": "^1.1.3",
+    "cli-table2": "^0.2.0",
+    "contentful": "^4.3.0"
+  }
+}
