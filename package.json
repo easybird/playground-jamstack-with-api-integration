@@ -7,10 +7,10 @@
     "clean": "rm -f public/*",
     "build:content": "node data/import.js",
     "babel:build": "echo 'https://www.aerobatic.com/blog/hugo-npm-buildtool-setup/'",
-    "build:prod": "npm run clean && npm run build:content && hugo",
-    "start": "npm run clean && npm run build:content && npm run babel:build && parallelshell 'hugo serve'"
+    "build:prod": "yarn clean && yarn install && yarn build:content && hugo",
+    "start": "yarn clean && yarn build:content && yarn babel:build && parallelshell 'hugo serve'"
   },
-  "author": "",
+  "author": "Easybird",
   "license": "ISC",
   "devDependencies": {
     "parallelshell": "^3.0.1",
