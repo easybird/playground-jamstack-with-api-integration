@@ -7,7 +7,7 @@
     "clean": "rm -f public/*",
     "build:content": "node data/import.js",
     "babel:build": "echo 'https://www.aerobatic.com/blog/hugo-npm-buildtool-setup/'",
-    "prod": "npm run clean && npm run build:content && hugo",
+    "build:prod": "npm run clean && npm run build:content && hugo",
     "start": "npm run clean && npm run build:content && npm run babel:build && parallelshell 'hugo serve'"
   },
   "author": "",
