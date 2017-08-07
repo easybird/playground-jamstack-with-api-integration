@@ -7,4 +7,4 @@ with #Hugo #Contentful #Snipcard, deployed with #Netlify
 
 
 #### Production mode
-// not yet decided
+```yarn build:prod```

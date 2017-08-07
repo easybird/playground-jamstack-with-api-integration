@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -f static/*.js static/*.css",
+    "clean": "rm -f public/*",
     "build:content": "node data/import.js",
     "babel:build": "echo 'https://www.aerobatic.com/blog/hugo-npm-buildtool-setup/'",
+    "prod": "npm run clean && npm run build:content && hugo",
     "start": "npm run clean && npm run build:content && npm run babel:build && parallelshell 'hugo serve'"
   },
   "author": "",
