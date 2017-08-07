@@ -1,4 +1,4 @@
-### Playground Jamstack site
+### Playground JAMstack site
 with #Hugo #Contentful #Snipcard, deployed with #Netlify
 
 ### How to run
