@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-md-10 category-header">
+    <a href="#" class="snipcart-checkout">
+      View cart (<span class="snipcart-total-items">0</span>)
+    </a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-10 category-description">
+  </div>
+</div>
+
+{{ range $products := getJSON "/data/generated/products.json" }}
+<div class="row content">
+  {{ if and (isset .fields "image") .fields.image }}
+  <div class="col-sm-6 content-image" style="background-image: url({{ .fields.image.fields.file.url }})">
+  </div>
+  <div class="col-sm-6 content-excerpt">
+  {{ else }}
+  <div class="col-sm-12 content-excerpt">
+  {{ end }}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row content-date">
+          {{ dateFormat "Monday January 2, 2006" .sys.updatedAt }}
+        </div>
+        <div class="row content-title">
+          <h2> <a href="/product/{{ .sys.id }} "> {{ .fields.name }} </a> </h2>
+        </div>
+        <div class="row content-summary">
+          {{ .fields.slug }}
+          <a class="more-link" href="/product/{{ .sys.id }} ">Read more</a>
+
+        </div>
+        <div class="row content-summary">
+
+          <button
+              class="snipcart-add-item waves-effect waves-light btn"
+              data-item-id="{{ .sys.id }}"
+              data-item-name="{{ .fields.name }}"
+              data-item-price="{{ .fields.price }}"
+              data-item-url="{{ .fields.image.fields.file.url }}">
+                  <i class="material-icons right">shopping_cart</i>
+                  Add to cart
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
