@@ -13,9 +13,10 @@
   "author": "Easybird",
   "license": "ISC",
   "devDependencies": {
-    "parallelshell": "^3.0.1",
     "chalk": "^1.1.3",
     "cli-table2": "^0.2.0",
-    "contentful": "^4.3.0"
-  }
+    "contentful": "^4.3.0",
+    "parallelshell": "^3.0.1"
+  },
+  "dependencies": {}
 }

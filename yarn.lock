@@ -21,7 +21,7 @@ are-we-there-yet@~1.1.2:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
 
-"axios@github:contentful/axios#fix/https-via-http-proxy":
+axios@contentful/axios#fix/https-via-http-proxy:
   version "0.16.3"
   resolved "https://codeload.github.com/contentful/axios/tar.gz/486c956313b4937d83202ae72304d3eb210487bb"
   dependencies:
